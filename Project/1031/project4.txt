@@ -1,0 +1,65 @@
+
+Project #4
+
+Due Dates:  Saturday, October 29 at 11:59pm
+
+Submit:    eLearning
+
+Late Policy:  -10 points per hour late
+
+Instructions: This is an individual assignment.  All work should be your own.
+
+
+
+Objectives:
+
+     Create a hash table.
+     Use the hash table to solve a word puzzle.
+
+
+Description:
+
+     A grid consisting of letters is to be checked against a dictionary of words
+     to see if the grid contains any of the words.
+
+     The user can input a value for the rows and columns of the grid and the program
+     will create a grid of random characters.
+
+     The program will read in a dictionary file (provided) and check if any of the
+     words exist in the grid, considering 8 possible directions (horizontal, vertical,
+     diagonal).
+
+     The checking for words will be performed in one of three ways:
+
+     a) when the dictionary list is kept in a linked list.
+     b) when the dictionary list is kept in a tree.
+     c) when the dictionary list is kept in a hash table.
+
+     The linked list and tree may be the ones from the textbook.
+
+     The hash table should be your own creation, not copied from the textbook
+     or other sources. You should design and code it yourself.  It can be any of
+     the hash table types discussed in the slides.
+
+
+
+Questions:
+     Submit answers to these questions in addition to your source code:
+
+     1) Explain the algorithm used in each case of a, b, c above.
+
+     2) Explain the big-O running time in each case of a, b, c above.
+
+
+
+Scoring:
+     Main program:  30 points
+     Hash table:    50 points
+     Questions:     20 points
+
+
+Submit to eLearning:
+     WordPuzzle.java
+     MyHashTable.java
+     Questions.txt  (or .doc, .docx, etc.)
+

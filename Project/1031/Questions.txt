@@ -1,0 +1,20 @@
+---------------------------Question 1----------------------------------------
+Explain the algorithm used in each case of a, b, c above.
+
+a. In case a, I use a linked list to keep dictionary and every word from dictionary is kept in every node in the linked list. When we try to check if the word from the grid is in the dictionary, we traverse use the linked list and use compareTo() function.
+
+b. In case b, I use a AVL tree to keep dictionary and every word from dictionary is kept in every node in the AVL tree. When we try to check if the word from the grid is in the dictionary, we use contains() function. In this function, we use recursion searching the tree to find each word.
+
+c. In case c, I use a hash table to keep dictionary and use separate chaining to handle collisions. The hash table is a array list in each of which there is a linked list to keep a list of all elements that hash to the same location. The default size of the array list is 10000, but it is best in such case if the table size is a prime number. So I write a isPrime() function and a nextPrime() function to check if this default size is a prime or set a new prime. Every word read from dictionary.txt one-by-one is kept in the hash table. And by traversing the linked list in this array list using contains() function we check if the word which is in the new word array list is a word in the dictionary.
+
+---------------------------Question 2----------------------------------------
+Explain the big-O running time in each case of a, b, c above.
+
+a. In case a, m is size of arrayList, n is size of linked list. big-O is O(mn), because getting m values from arrayList takes O(m) time with m iterations and using itr.hasNext() in linked list to search values takes O(n) time with n iterations. So big-O is O(mn).
+
+b. In case b, m is size of arrayList, so getting m values from arrayList takes O(m) time with m iterations. Searching a value in a AVL tree takes O(logn) time, so big-O is O(n * logn).
+
+c. In case c, m is size of arrayList, so getting m values from arrayList takes O(m) time with m iterations.
+And in hash table:
+In the worst case, all n items will hash to the same list, and we will be reduced to doing a linear search of that list: O(n). So big-O is O(mn).
+In the average case, we assume that the n items are distributed evenly among the lists. Since we have n items distributed among hSize lists, we are looking at O(nhSize). And if hsize is much larger than n, then most lists will have 0 or 1 item, an the average case would be approximately O(1), so big-O is O(m) But if n is much larger than hSize, we are looking at an O(n) linear search sped up by a constant factor (hSize), but still O(n), So big-O is O(mn).

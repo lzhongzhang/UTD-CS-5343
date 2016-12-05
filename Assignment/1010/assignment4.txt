@@ -1,0 +1,138 @@
+Assignment #4
+
+
+Due Dates: Monday, October 10 at 11:59pm
+
+Submit:    eLearning
+
+Late Policy:  -10 points per hour late
+
+Instructions: This is an individual assignment.  Answers should be your own work.
+
+
+Chapter 4
+
+
+
+
+6 points
+1.  Tree traversals.
+
+    Give the sequence of letters for each traversal of this binary tree:
+
+                    q
+                  /   \
+                 e     r
+                / \   / \
+               c  d  n   s
+              /         /
+             a         w
+
+
+
+    a.  (2 pts) an inorder traversal
+    b.  (2 pts) a preorder traversal
+    c.  (2 pts) a postorder traversal
+
+
+
+
+10 points
+2.  Draw an AVL tree for the following values inserted in this order.  Illustrate
+    each rotation that occurs:
+           65 13 16 52 28 11 20 14 87 50 26
+
+
+10 points
+3.  Draw an AVL tree for the following values inserted in this order.  Illustrate
+    each rotation that occurs:
+           83 12 68 55 32 6 46 57 62
+
+
+10 points
+4. For the splay tree shown below, show how an access of node 60 is performed.  Illustrate each operation that occurs:
+
+
+      10
+       \
+        20
+       / \
+      15  30
+         / \
+        25  40
+           / \
+          35  50
+               \
+                60
+
+
+10 points
+5. For the splay tree shown below, show how an access of node 75 is performed.  Illustrate each operation that occurs:
+
+                 80
+              /     \
+           40         120
+          /  \
+        20    60
+        /\    /\
+      10 30 50 70
+            /   \
+           45   75
+
+
+
+10 points
+6. For the B+-tree where M=3 and L=5 shown below, show how an insert of value 80 is handled.
+
+
+       || 12 || 50 ||
+       /      |     \
+      /       |      \
+     2       12      50
+     5       18      65
+     7       20      70
+     9       21      72
+    10       24      78
+
+
+
+10 points
+7. For the B+-tree where M=3 and L=5 shown below, show how an insert of value 28 is handled.
+
+
+                        || 24 || 75 ||
+                       /       |       \
+                     /         |          \
+                   /           |            \
+     || 10 || 16 ||     || 41 || 50 ||      || 82 || 90 ||
+      |    /      \     /      |     \       |     \      \
+     /     |       |   |       |      \      |      |      |
+    2     10      16   24     41      50    75     82     90
+    5     11      18   26     42      65    78     83     92
+    7     14      20   30     45      70    80     86     93
+    9             21   33     47      72    81
+                       35
+
+10 points
+8.  A B+-tree is to be stored on disk whose block size is 3096 bytes.  The data records
+     to be stored are 36 bytes, and their key is 4 bytes.  Determine the values for
+     M and L for the B+-tree.  Assume pointers are 4 bytes each.
+
+
+8 points
+9.  For the problem above, how many levels are needed to store 8,600,000 records?
+
+
+8 points
+10. If a binary tree has N nodes, how many null child pointers will it have?  Explain your reasoning.
+
+
+8 points
+11. In a perfect binary tree (one filled at every level), what does adding another level do to the number of nodes in the tree?
+
+
+
+Submit to eLearning:
+    hw4.doc (.doc can be .txt, .jpg, etc.)
+
+

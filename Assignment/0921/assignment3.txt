@@ -1,0 +1,149 @@
+Assignment #3
+
+
+Due Dates: Wednesday, September 21 at 11:59pm
+
+Submit:    eLearning
+
+Late Policy:  -10 points per hour late
+
+Instructions: This is an individual assignment.  Answers should be your own work.
+
+
+Chapter 3
+
+
+10 points
+1.  Linked lists and arrays:
+    a. What are some advantages of linked lists versus arrays?
+Linked lists use a series of nodes each of which contains a pointer to the next node so that this allows a new node to be inserted or removed in O(1) time. But insertion or deletion in a array need move the list and these operation are O(N).
+    b. What are some advantages of arrays versus linked lists?
+Arrays are systematic arrangement of similar objects which have their own signs so that accessing an item by its index can occur in O(1) time. But the only way to find an item in a linked list is to traverse the list and these operation are O(N).
+
+15 points
+2.  What is the Big-O running time of the following code fragment?
+    Assume lst1 has N items, and lst2 is initially empty.
+
+   public static void add( List<Integer> lst1, List<Integer> lst2)
+   {
+      for ( Integer x : lst1 )
+         lst2.add(0, x);        // add to front
+   }
+
+
+   a.  If an ArrayList is passed for lst1 and lst2.  Explain your answer.
+
+If an Arraylist is passed for lst1 and lst2, the result is O(N^2).
+Because adding an item to the front in Arraylist requires moving the other elements down, which takes O(N) time, and there are N iterations.
+
+   b.  If a LinkedList is passed for lst1 and lst2.  Explain your answer.
+
+If a LinkedList is passed for lst1 and lst2, the result is O(N).
+Because adding an item to the front in Linkedlist only requires O(1) time, and there are N iterations.
+
+15 points
+3.  What is the Big-O running time of the following code fragment?
+
+   public static void erase( List<Integer> lst )
+   {
+      Iterator<Integer> itr = lst.iterator();
+
+      while ( itr.hasNext() )
+      {
+         Integer x = itr.next();
+         itr.remove();
+      }
+
+   }
+
+   a.  If an ArrayList is passed for lst.  Explain your answer.
+
+If a ArrayList is passed for lst1, it needs get its own iterator whose loop makes N iterations and use its remove method in which items must be shifted so the result is O(N^2).
+
+   b.  If a LinkedList is passed for lst.  Explain your answer.
+
+If a LinkedList is passed for lst1, it needs get its own iterator whose loop makes N iterations and remove an item only takes O(1) time, so the result is O(N).
+
+15 points
+4.  What is the Big-O running time of the following code fragment?
+    Assume lst1 has N items, and lst2 has N items.
+
+   public static int Count( List<Integer> lst1, List<Integer> lst2)
+   {
+      Iterator<Integer> itr1 = lst1.iterator();
+
+      int count=0;
+      while ( itr1.hasNext() )
+      {
+         Integer x = itr1.next();
+         Iterator<Integer> itr2 = lst2.iterator();
+         while ( itr2.hasNext() )
+            if ( x.equals( itr2.next()) )
+               count++;
+      }
+
+      return count;
+   }
+
+
+   a.  If an ArrayList is passed for lst1 and lst2.  Explain your answer.
+
+Arraylist is O(N^2) because lst1 and lst2 need get their own iterators whose loop makes N iterations.
+
+   b.  If a LinkedList is passed for lst1 and lst2.  Explain your answer.
+
+Linkedlist is O(N^2) because lst1 and lst2 need get their own iterators whose loop makes N iterations.
+
+15 points
+5.  What is the Big-O running time of the following code fragment?
+
+
+      public static int calc( List<Integer> lst )
+      {
+         int count = 0;
+         int N = lst.size();
+
+         for ( int i=0; i<N; i++)
+         {
+            if (lst.get(i) > 0)
+               sum += lst.get(i);
+            else
+               sum += lst.get(i) * lst.get(i);
+         }
+         return sum;
+      }
+
+
+   a.  If an ArrayList is passed for lst.  Explain your answer.
+Arraylist is O(N) because getting a value at an index position is O(1), with O(N) iterations.
+   b.  If a LinkedList is passed for lst.  Explain your answer.
+Linkedlist is O(N^2) since getting the ith value takes O(N) time, with O(N) iterations.
+
+15 points
+6. Suppose a Java method receives a List<Integer> and reverses the order of the items it contains by removing each item from the front of the list and adding pushing it onto a Stack<Integer>, and then popping the items from the stack and inserting each item to the end of the list.
+What is the expected Big-O running time if:
+
+   a.  If an ArrayList is passed.  Explain your answer.
+
+Arraylist is O(N^2) because each item that is selected from front of the list inserted into end of list needs remove all of the other items, which takes O(N), with O(N) iterations.
+
+   b.  If a LinkedList is passed.  Explain your answer.
+Linkedlist is O(N) because a node inserted or removed only takes O(1) time, with O(N) iterations.
+
+7. Show each step of converting a+b*c+(d-e) from infix to postfix notation, using the algorithm described in the textbook that uses a stack.
+
+First, the symbol a is read, so it is passed through to the output. Then
++ is read and pushed onto the stack. Next b is read and passed through to the output. Next a * is read. The top entry on the operator stack has lower precedence than * , so nothing is output and * is put on the stack. Next, c is read and output. Thus far, we have the next symbol is a +.  Checking the stack, we find that we will pop a * and place it on the output; pop the other + , which is not of lower but equal priority, on the stack; and then push the +. The next symbol read is a ( , which, being of highest precedence, is placed on the stack. Then d is read and output. We continue by reading a -. Since open parentheses do not get removed except when a closed parenthesis is being processed, there is no output. Next, e is read and output. Now we read a ) , so the stack is emptied back to the ( . We output a -. The input is now empty, so we pop and output symbols from the stack until it is empty. So the output is abc*+de-+.
+
+Stack             Output a
+Stack +           Output a b
+Stack + *         Output a b c
+Stack +           Output a b c * +
+Stack + (         Output a b c * + d
+Stack + ( -       Output a b c * + d e
+Stack +           Output a b c * + d e -
+Stack             Output a b c * + d e - +
+Submit to eLearning:
+    hw3.doc (.doc can be .txt, .jpg, etc.)
+
+

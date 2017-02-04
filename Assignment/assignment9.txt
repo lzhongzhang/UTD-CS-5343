@@ -1,0 +1,68 @@
+Assignment #9
+
+
+Due Date:  Wednesday, December 7 at 11:59pm 
+
+Submit:    eLearning
+
+Late Policy:  -10 points per hour late
+
+Instructions: This is an individual assignment.  Answers should be your own work.
+
+
+Chapter 9
+
+100 points total
+
+
+
+10 points
+1. Find a topological sort for the graph in file hw9_top_sort.jpg.
+
+
+10 points
+2. For the graph in the file hw9_graph_letters.jpg, give a path of a breadth-first search,
+   starting from vertex I.
+
+ 
+20 points
+3. Find the single-source shortest path from Home to all of the other locations in the graph in
+   file hw9_points_of_interest.jpg.  Show each step as in slides 57 to 64.
+ 
+ 
+20 points
+4. Find the maximum flow for from JCT A to JCT G for the graph in file hw9_dag_junctions.jpg.  
+   Show each step as in slides 84 to 85.
+ 
+
+10 points
+5. Find the minimum spanning tree using Prim's algorithm for the graph in file hw9_points_of_interest.jpg.  Show each step as in slide 89.
+
+
+10 points
+6. Repeat #5 using Kruskal's algorithm.  Show each step as in slide 100.
+
+
+10 points
+7. Produce a depth-first spanning tree for the graph in file hw9_graph_dfs.jpg. 
+   Show as in slide 124, labeling Num(v) and Low(v) for each vertex and identifying 
+   all articulation points. 
+
+
+10 points
+8. For the graph in the file hw9_graph_letters.jpg, does it have an Euler Path or Euler Circuit?
+   If it does, give the sequence of letters for it.  
+
+
+
+
+Submit to eLearning:
+    hw9.doc (.doc can be .txt, .jpg, etc.)
+
+
+
+   
+
+
+
+
